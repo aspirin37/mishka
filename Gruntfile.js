@@ -33,7 +33,7 @@ module.exports = function(grunt) {
           src: ["build/*.html", "build/css/*.css"]
         },
         options: {
-          server: "build/",
+          server: ".",
           watchTask: true,
           notify: false,
           open: true,
