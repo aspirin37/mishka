@@ -1,5 +1,6 @@
 .main-nav {
   position: absolute;
+  z-index: 1;
   top: 0;
   width: 100%;
 }
@@ -32,11 +33,11 @@
   text-align: center;
   text-decoration: none;
 
-  &:hover {
+  &:not(.main-nav__link--active):hover {
     color: fade(@black, 60%)
   }
 
-  &:active {
+  &:not(.main-nav__link--active):active {
     color: fade(@black, 30%)
   }
 
@@ -68,4 +69,131 @@
 
 .main-nav__delivery {
   display: none;
+}
+
+@media @tablet-width {
+  .main-nav {
+    position: relative;
+    width: 668px;
+    padding: 0 50px;
+    margin-bottom: 50px;
+  }
+
+  .main-nav__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: transparent;
+  }
+
+  .main-nav__item {
+    display: block;
+    box-shadow: none;
+
+    &--catalog,
+    &--order,
+    &--stock {
+      padding-top: 18px;
+      margin-right: 36px
+    }
+
+    &--order {
+      padding-top: 18px;
+      margin-right: auto;
+    }
+
+    &--logo {
+      order: 1;
+      width: 320px;
+      box-shadow: 0 1px 0 0px @light-grey;
+    }
+
+    &--catalog {
+      order: 4;
+    }
+
+    &--order {
+      order: 5;
+    }
+
+    &--navigation {
+      order: 2;
+      box-shadow:
+        inset 1px 0 0 0px @light-grey,
+        inset -1px 0 0 0px @light-grey,
+        0 1px 0 0px @light-grey;
+    }
+
+    &--cart {
+      flex-grow: 1;
+      order: 3;
+      box-shadow: 0 1px 0 0px @light-grey;
+    }
+
+    &--stock {
+      order: 6;
+      display: none;
+    }
+
+    &--sale {
+      order: 7;
+    }
+
+    &--delivery {
+      order: 8;
+    }
+  }
+
+  .main-nav__delivery {
+    order: 8;
+    display: block;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .main-nav__link {
+    box-shadow: none;
+    padding-left: 0;
+    padding-right: 0;
+
+    &--logo {
+      padding-left: 0;
+      padding-right: 0;
+      box-shadow: 0 1px 0 0 @light-grey;
+    }
+
+    &--navigation {
+      font-size: 0;
+      width: 84px;
+      box-sizing: border-box;
+    }
+
+    &--cart {
+      padding-top: 30px;
+      padding-right: 0;
+      text-align: right;
+    }
+
+    &--catalog,
+    &--order,
+    &--stock {
+      padding: 0;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 24px;
+    }
+
+    &--sale {
+      display: none;
+    }
+  }
+
+  .main-nav__burger {
+    display: none;
+  }
+
+  .main-nav__wrapper {
+    width: auto;
+  }
 }
