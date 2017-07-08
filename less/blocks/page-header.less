@@ -130,7 +130,8 @@
   }
 
   .page-header__heading {
-    width: auto;
+    width: 570px;
+    margin: 0 auto;
     font-size: 43px;
     line-height: 50px;
   }
@@ -162,5 +163,29 @@
       top: 4px;
       right: 33px;
     }
+  }
+}
+
+@media @desktop-width {
+  .page-header {
+    height: 345px;
+
+    &--index {
+      height: 834px;
+
+      @media @desktop-retina {
+        background-size: 1250px 89%;
+      }
+    }
+  }
+
+  .page-header__heading {
+    width: 700px;
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .page-header__options {
+    width: 1050px;
   }
 }
