@@ -58,7 +58,7 @@
     </div>
   </header>
   <main>
-    <article class="order">
+    <section class="order">
       <div class="order__wrapper">
         <div class="order__heading">Вязаные корзинки</div>
         <h2 class="order__weekly">Товар недели</h2>
@@ -68,7 +68,7 @@
             <table class="order__table">
               <tr class="order__tr">
                 <th class="order__th">Цвет:</th>
-                <th class="order__th"> &#171;Тиффани&#187;/серый</th>
+                <th class="order__th">&#171;Тиффани&#187;/серый</th>
               </tr>
               <tr class="order__tr">
                 <th class="order__th">Диаметр:</th>
@@ -90,7 +90,7 @@
             </div>
           </div>
         </div>
-      </article>
+      </section>
       <section class="info">
         <h2 class="info__heading">Коротко о нас:</h2>
         <div class="info__wrapper">
@@ -106,17 +106,38 @@
           </div>
         </div>
       </section>
-      <section class="reviews">
-        <div class="reviews__wrapper">
-          <h2 class="reviews__heading">Отзывы</h2>
-          <p class="reviews__review">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-          <div class="reviews__name">Анастасия Красильникова</div>
-          <a href="#" class="reviews__username">@misssssiskras</a>
-          <div class="reviews__controls">
-            <button type="button" class="reviews__control reviews__control--left"></button>
-            <button type="button" class="reviews__control reviews__control--right"></button>
+      <div class="container container--reviews">
+        <section class="reviews">
+          <div class="reviews__wrapper">
+            <h2 class="reviews__heading">Отзывы</h2>
+            <p class="reviews__review">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и&#160;мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+            <div class="reviews__name">Анастасия Красильникова</div>
+            <a href="#" class="reviews__username">@misssssiskras</a>
+            <div class="reviews__controls">
+              <button type="button" class="reviews__control reviews__control--left"></button>
+              <button type="button" class="reviews__control reviews__control--right"></button>
+            </div>
+            <a class="reviews__btn btn" href="#">Написать</a>
           </div>
-          <a class="reviews__btn btn">Написать</a>
+        </section>
+      </div>
+      <section class="contacts">
+        <div class="contacts__wrapper">
+          <h2 class="contacts__heading">Контакты</h2>
+          <div class="contacts__info">
+            <div class="contacts__item">
+              <span class="contacts__text">e-mail:</span>
+              <a href="#" class="contacts__link">info@mimimishkashop.ru</a>
+            </div>
+            <div class="contacts__item">
+              <span class="contacts__text">адрес:</span>
+              <p class="contacts__adress">г. Санкт-Петербург,<br>ул. Большая<br>Конюшенная,<br>д. 19/8, офис 101</p>
+            </div>
+          </div>
+        </div>
+        <div class="contacts__map" id="map-canvas"></div>
+        <div class="contacts__write">
+          <a class="btn btn--contacts" href=#>Напишите нам</a>
         </div>
       </section>
     </main>
