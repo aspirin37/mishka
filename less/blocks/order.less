@@ -1,8 +1,5 @@
 .order {
   position: relative;
-  padding: 0 30px;
-  padding-bottom: 40px;
-  margin: 0 auto;
 
   &::after {
     content: "";
@@ -16,6 +13,16 @@
     background-repeat: repeat-x;
     transform: rotate(180deg);
   }
+}
+
+.order__wrapper {
+  position: relative;
+  width: 320px;
+  padding: 0 30px;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 .order__heading {
@@ -82,14 +89,19 @@
 
 @media @tablet-width {
   .order {
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 69px;
 
     &::after {
       background-image: url("../../img/bg-zigzag-line-tablet.svg");
       height: 16px;
     }
+  }
+
+  .order__wrapper {
+    width: 758px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 69px;
+    margin-bottom: 48px;
   }
 
   .order__heading {
@@ -114,7 +126,7 @@
 
   .order__description {
     width: 334px;
-    padding-right: 43px;
+    padding-right: 42px;
     box-sizing: border-box;
   }
 
@@ -155,16 +167,24 @@
 
 @media @desktop-width {
   .order {
+
+    &::after {
+      display: block;
+      width: 100%;
+      background-image: url("../../img/bg-zigzag-line.svg");
+      background-repeat: repeat-x;
+      height: 23px;
+    }
+  }
+
+  .order__wrapper {
+    position: relative;
     width: 1050px;
     padding-top: 60px;
     padding-left: 175px;
     padding-bottom: 97px;
+    margin-bottom: 59px;
     box-sizing: border-box;
-
-    &::after {
-      background-image: url("../../img/bg-zigzag-line.svg");
-      height: 23px;
-    }
   }
 
   .order__container {

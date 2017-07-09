@@ -1,6 +1,8 @@
 .info {
   width: 320px;
   padding: 0 30px;
+  margin-bottom: 57px;
+  margin: 0 auto;
   box-sizing: border-box;
 }
 
@@ -76,10 +78,11 @@
   }
 }
 
-@media @desktop-width {
+@media @tablet-width {
   .info {
     width: 768px;
     padding: 0 50px;
+    margin-bottom: 35px;
   }
 
   .info__heading {
@@ -104,5 +107,26 @@
     margin-bottom: 51px;
     font-size: 20px;
     line-height: 22px;
+  }
+}
+
+@media @desktop-width {
+  .info {
+    width: 1050px;
+    padding-left: 175px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .info__heading {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .info__column {
+
+    &--left {
+      margin-right: 50px;
+    }
   }
 }
