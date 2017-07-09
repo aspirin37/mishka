@@ -1,0 +1,40 @@
+.page-footer {
+  height: 160px;
+  background-color: @light-grey;
+}
+
+.page-footer__wrapper {
+  width: 320px;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+.page-footer__copyright {
+  display: flex;
+  justify-content: space-between;
+  width: 185px;
+  margin: 0 auto;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 18px;
+  color: @black;
+}
+
+.page-footer__academy-logo {
+  position: relative;
+  top: -5px;
+  right: 2px;
+  display: inline-block;
+  width: 27px;
+  height: 34px;
+  background-image: url("../../img/logo-htmlacademy.svg");
+  opacity: 0.7;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
