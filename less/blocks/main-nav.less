@@ -37,8 +37,16 @@
     color: fade(@black, 60%)
   }
 
+  &:not(.main-nav__link--active):hover .main-nav__svg {
+    fill: @light-green;
+  }
+
   &:not(.main-nav__link--active):active {
     color: fade(@black, 30%)
+  }
+
+  &:not(.main-nav__link--active):active .main-nav__svg {
+    fill: fade(@light-green, 30%);
   }
 
   &--logo {
@@ -69,6 +77,23 @@
 
 .main-nav__delivery {
   display: none;
+}
+
+.main-nav__svg-wrapper {
+  position: relative;
+  width: 260px;
+  margin: 0 auto;
+}
+
+.main-nav__svg {
+  fill: #d3d2d2;
+  position: absolute;
+  left: 0;
+  top: 6px;
+
+  &--cart {
+    top: 2px;
+  }
 }
 
 @media @tablet-width {
@@ -197,6 +222,19 @@
 
   .main-nav__wrapper {
     width: auto;
+  }
+
+  .main-nav__svg-wrapper {
+    width: auto;
+  }
+
+  .main-nav__svg {
+    left: 31px;
+    top: 12px;
+
+    &--cart {
+      top: 5px;
+    }
   }
 }
 

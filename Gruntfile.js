@@ -30,10 +30,10 @@ module.exports = function(grunt) {
     browserSync: {
       server: {
         bsFiles: {
-          src: ["build/*.html", "build/css/*.css"]
+          src: ["build/*.html", "build/css/*.css", "build/img/**", "build/js/**"]
         },
         options: {
-          server: ".",
+          server: "build/",
           watchTask: true,
           notify: false,
           open: true,
@@ -51,6 +51,14 @@ module.exports = function(grunt) {
       style: {
         files: ["less/**/*.less"],
         tasks: ["less", "postcss", "csso"]
+      },
+      image: {
+        files: ["img/sprite/*.svg"],
+        tasks: ["copy:image", "svgmin", "svgstore"]
+      },
+      js: {
+        files: ["js/**"],
+        tasks: ["copy:js"]
       }
     },
 
@@ -117,6 +125,20 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           src: ["*.html"],
+          dest: "build"
+        }]
+      },
+      image: {
+        files: [{
+          expand: true,
+          src: ["img/sprite/*.svg"],
+          dest: "build"
+        }]
+      },
+      js: {
+        files: [{
+          expand: true,
+          src: ["js/**"],
           dest: "build"
         }]
       }

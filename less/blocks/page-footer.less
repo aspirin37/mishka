@@ -6,7 +6,12 @@
 .page-footer__wrapper {
   width: 320px;
   padding: 0 30px;
+  margin: 0 auto;
   box-sizing: border-box;
+}
+
+.page-footer__logo {
+  display: none;
 }
 
 .page-footer__copyright {
@@ -27,14 +32,58 @@
   display: inline-block;
   width: 27px;
   height: 34px;
-  background-image: url("../../img/logo-htmlacademy.svg");
-  opacity: 0.7;
+}
 
-  &:hover {
-    opacity: 1;
+.page-footer__academy-logo .page-footer__svg {
+  fill: @light-green;
+}
+
+.page-footer__academy-logo:hover .page-footer__svg {
+  fill: @hover;
+}
+
+.page-footer__academy-logo:active .page-footer__svg {
+  opacity: 0.3;
+}
+
+@media @tablet-width {
+  .page-footer {
+    height: 143px;
+    padding-top: 56px;
+    box-sizing: border-box;
   }
 
-  &:active {
+  .page-footer__wrapper {
+    display: flex;
+    justify__content: space-between;
+    align-items: center;
+    width: 768px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .page-footer__logo {
+    display: block;
+    transform: translateY(-5px);
+  }
+
+  .page-footer__logo:hover .page-footer__svg {
+    fill: @hover;
+  }
+
+  .page-footer__logo:active .page-footer__svg {
     opacity: 0.3;
+  }
+
+  .page-footer__copyright {
+    margin-right: 0;
+    margin-left: 0;
+    transform: translateY(3px);
+  }
+}
+
+@media @desktop-width {
+  .page-footer__wrapper {
+    width: 1150px;
   }
 }
