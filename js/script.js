@@ -27,7 +27,7 @@ function initMap() {
 (function(window, document) {
   'use strict';
   var file = 'img/sprite.svg', // путь к файлу спрайта на сервере
-      revision = 2;            // версия спрайта
+      revision = 2;            // версия спрайта, меняй при обновлении
   if (!document.createElementNS || !document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect) return true;
   var isLocalStorage = 'localStorage' in window && window['localStorage'] !== null,
     request,

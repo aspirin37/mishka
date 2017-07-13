@@ -1,0 +1,130 @@
+.form {
+  padding-top: 22px;
+}
+
+.form__text {
+  width: 320px;
+  padding: 0 30px;
+  margin: 0 auto;
+  margin-bottom: 32px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  color: @grey;
+  box-sizing: border-box;
+}
+
+.form__fieldset {
+  padding: 0;
+  border: none;
+  margin: 0;
+}
+
+.form__wrapper {
+  position: relative;
+  width: 320px;
+  padding: 0 30px;
+  padding-right: 40px;
+  padding-top: 41px;
+  padding-bottom: 11px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 30px;
+    top: -1px;
+    display: block;
+    width: 200px;
+    height: 1px;
+    background-color: @light-green;
+  }
+}
+
+.form__heading {
+  position: absolute;
+  top: -9px;
+  left: 30px;
+  margin: 0;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  color: @light-green;
+  text-transform: uppercase;
+}
+
+.form__field {
+  margin-bottom: 23px;
+}
+
+.form__input {
+
+  &--optional {
+    display: none;
+
+    &:checked ~ .form__label--square::after {
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: 4px;
+      display: block;
+      width: 20px;
+      height: 8px;
+      border-bottom: 2px solid @black;
+      border-left: 2px solid @black;
+      border-color: @black;
+      transform: rotate(-45deg);
+    }
+
+    &:checked ~ .form__label--radio::after {
+      content: "";
+      position: absolute;
+      left: 12px;
+      top: 4px;
+      display: block;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: @light-green;
+    }
+
+    &:hover ~ .form__label--optional::before {
+      box-shadow: inset 0 0 0 2px @light-green;
+    }
+
+    &:active ~ .form__label--optional::before {
+      box-shadow: inset 0 0 0 2px fade(@grey, 30%);
+    }
+  }
+}
+
+.form__label {
+  position: relative;
+  display: block;
+  min-height: 38px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  color: @black;
+  cursor: pointer;
+
+  &--optional {
+    padding-left: 62px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -8px;
+      display: block;
+      width: 39px;
+      height: 39px;
+      box-shadow: inset 0 0 0 2px @black;
+    }
+  }
+
+    &--radio::before {
+    border-radius: 50%;
+  }
+}
