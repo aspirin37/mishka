@@ -33,6 +33,7 @@
   &--contacts {
     padding-top: 8px;
     padding-right: 30px;
+    padding-bottom: 0;
   }
 
   &--name {
@@ -74,6 +75,7 @@
 
   &--contacts {
     position: relative;
+    margin-bottom: 19px;
   }
 }
 
@@ -98,6 +100,28 @@
       fill: @light-green;
       opacity: 1;
     }
+  }
+
+  &--textarea {
+    min-height: 140px;
+    border: none;
+    box-shadow: 0 0 0 2px @black;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 17px;
+    line-height: 18px;
+
+      &:hover,
+      &:focus {
+        box-shadow: 0 0 2px @light-green;
+      }
+
+      &:hover,
+      &:focus {
+        box-shadow: 0 0 0 2px @light-green;
+      }
   }
 
   &--optional {
@@ -178,6 +202,7 @@
 
   &--green {
     margin-right: 30px;
+    margin-bottom: 25px;
     color: @light-green;
     text-transform: uppercase;
   }
@@ -356,6 +381,10 @@
       left: -166px;
       font-size: 17px;
       line-height: 16px;
+    }
+
+    &--other {
+      top: 10px;
     }
 
     &--optional::before {

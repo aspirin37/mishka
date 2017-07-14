@@ -121,7 +121,7 @@
               <div class="form__input-container">
                 <input type="tel" id="s-name" class="form__input form__input--name" placeholder="+7 ХХХ ХХ ХХ*">
                 <svg class="form__svg form__svg--phone" width="25" height="25">
-                <use xlink:href="#icon-phone"/>
+                  <use xlink:href="#icon-phone"/>
                 </svg>
               </div>
             </div>
@@ -140,9 +140,20 @@
           </div>
         </fieldset>
         <fieldset class="form__fieldset form__fieldset--other">
-          <div class="form__wrapper">
+          <div class="form__wrapper form__wrapper--contacts">
+            <div class="form__field form__field--name form__field--contacts">
+              <div class="form__label-container">
+                <label for="other" class="form__label form__label--name form__label--green form__label--other">Доп</span></label>
+                <div class="form__label-line"></div>
+              </div>
+              <textarea id="other" class="form__input form__input--textarea" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            </div>
           </div>
         </fieldset>
+        <div class="form__bottom">
+          <button class="form__btn btn" type="submit">Отправить Заказ</button>
+          <div class="form__required">* &#8212; обязательные для заполнения поля</div>
+        </div>
       </form>
     </section>
   </main>
