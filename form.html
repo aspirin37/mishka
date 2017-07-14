@@ -53,59 +53,94 @@
       <p class="form__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       <form action="https://echo.htmlacademy.ru" method="get">
         <fieldset class="form__fieldset form__fieldset--type">
-          <div class="form__wrapper">
-          <h2 class="form__heading">Тип</h2>
+          <div class="form__wrapper form__wrapper--type">
+            <h2 class="form__heading">Тип</h2>
             <div class="form__field">
               <input class="form__input form__input--optional form__input--radio" type="radio" name="type" id="accesorizes" checked>
               <label class="form__label form__label--optional form__label--radio" for="accesorizes">Аксессуар для интерьера</label>
             </div>
             <div class="form__field">
-               <input class="form__input form__input--optional form__input--radio" type="radio" name="type" id="toy">
+              <input class="form__input form__input--optional form__input--radio" type="radio" name="type" id="toy">
               <label class="form__label form__label--optional form__label--radio" for="toy">Детская игрушка</label>
             </div>
           </div>
         </fieldset>
         <fieldset class="form__fieldset form__fieldset--color">
-          <div class="form__wrapper">
-            <div class="form__field">
+          <div class="form__wrapper form__wrapper--color">
+            <h2 class="form__heading">Цвет</h2>
+            <div class="form__field form__field--color">
               <input class="form__input form__input--optional" type="checkbox" name="white" id="white" checked>
               <label class="form__label form__label--optional form__label--square" for="white">Белый</label>
             </div>
-            <div class="form__field">
-               <input class="form__input form__input--optional" type="checkbox" name="gray" id="gray" checked>
+            <div class="form__field form__field--color">
+              <input class="form__input form__input--optional" type="checkbox" name="gray" id="gray" checked>
               <label class="form__label form__label--optional form__label--square" for="gray">Серый</label>
             </div>
-            <div class="form__field">
+            <div class="form__field form__field--color">
               <input class="form__input form__input--optional" type="checkbox" name="tiff" id="tiff">
               <label class="form__label form__label--optional form__label--square" for="tiff">&#171;Тиффани&#187;</label>
             </div>
-            <div class="form__field">
-               <input class="form__input form__input--optional" type="checkbox" name="black" id="black">
+            <div class="form__field form__field--color">
+              <input class="form__input form__input--optional" type="checkbox" name="black" id="black">
               <label class="form__label form__label--optional form__label--square" for="black">Черный</label>
             </div>
-            <div class="form__field">
+            <div class="form__field form__field--color">
               <input class="form__input form__input--optional" type="checkbox" name="pink" id="pink">
               <label class="form__label form__label--optional form__label--square" for="pink">Розовый</label>
             </div>
-            <div class="form__field">
-               <input class="form__input form__input--optional" type="checkbox" name="orange" id="orange">
+            <div class="form__field form__field--color">
+              <input class="form__input form__input--optional" type="checkbox" name="orange" id="orange">
               <label class="form__label form__label--optional form__label--square" for="orange">Оранжевый</label>
             </div>
           </div>
         </fieldset>
         <fieldset class="form__fieldset form__fieldset--name">
-          <div class="form__wrapper">
-
+          <div class="form__wrapper form__wrapper--name">
+            <h2 class="form__heading">ФИО</h2>
+            <div class="form__field form__field--name">
+              <label for="name" class="form__label form__label--name">Имя:</label>
+              <input type="text" id="name" class="form__input form__input--name" placeholder="Введите ваше имя*">
+            </div>
+            <div class="form__field form__field--name">
+              <label for="f-name" class="form__label form__label--name">Фамилия:</label>
+              <input type="text" id="f-name" class="form__input form__input--name" placeholder="Укажите фамилию*">
+            </div>
+            <div class="form__field form__field--name">
+              <label for="s-name" class="form__label form__label--name">Отчество:</label>
+              <input type="text" id="s-name" class="form__input form__input--name" placeholder="Отчество, если желаете">
+            </div>
           </div>
         </fieldset>
         <fieldset class="form__fieldset form__fieldset--contacts">
-          <div class="form__wrapper">
-
+          <div class="form__wrapper form__wrapper--contacts">
+            <div class="form__field form__field--name form__field--contacts">
+              <div class="form__label-container">
+                <label for="s-name" class="form__label form__label--name form__label--green">Тел</span></label>
+                <div class="form__label-line"></div>
+              </div>
+              <div class="form__input-container">
+                <input type="tel" id="s-name" class="form__input form__input--name" placeholder="+7 ХХХ ХХ ХХ*">
+                <svg class="form__svg form__svg--phone" width="25" height="25">
+                <use xlink:href="#icon-phone"/>
+                </svg>
+              </div>
+            </div>
+            <div class="form__field form__field--name form__field--contacts">
+              <div class="form__label-container">
+                <label for="s-name" class="form__label form__label--name form__label--green">e-mail</span></label>
+                <div class="form__label-line"></div>
+              </div>
+              <div class="form__input-container">
+                <input type="email" id="s-name" class="form__input form__input--name" placeholder="Ваш Email*">
+                <svg class="form__svg form__svg--mail" width="32" height="32">
+                  <use xlink:href="#icon-mail"/>
+                </svg>
+              </div>
+            </div>
           </div>
         </fieldset>
         <fieldset class="form__fieldset form__fieldset--other">
           <div class="form__wrapper">
-
           </div>
         </fieldset>
       </form>
