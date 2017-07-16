@@ -1,3 +1,5 @@
+// карта
+
 function initMap() {
   var latLng = {lat: 59.93857, lng: 30.323};
   var mapCenter = {lat: 59.9388, lng: 30.323}
@@ -22,7 +24,7 @@ function initMap() {
   });
 }
 
-//
+// svg-спрайт
 
 (function(window, document) {
   'use strict';
@@ -62,3 +64,13 @@ function initMap() {
     request.send();
   } catch (e) {}
 }(window, document));
+
+// popup
+
+  var toggle = document.querySelector(".main-nav__burger");
+  var mobile = document.querySelector(".main-nav__item--mobile");
+
+  toggle.addEventListener("click", function(event) {
+    event.preventDefault();
+    mobile.classList.toggle("main-nav__item--logo");
+  });
